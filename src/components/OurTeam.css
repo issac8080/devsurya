@@ -1,0 +1,139 @@
+.our-team-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+  }
+  
+  .team-hero {
+    height: 30vh;
+    background-image: url('../assets/images/hero.jpeg'); /* Adjust your hero background */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .team-hero-text {
+    text-align: center;
+  }
+  
+  .team-title {
+    font-size: 3rem;
+    color: white;
+  }
+  
+  .team-breadcrumb {
+    font-size: 1.2rem;
+  }
+  
+  .team-breadcrumb .home {
+    color: yellow;
+  }
+  
+  .team-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 80px;
+    background-color: #121212;
+  }
+  
+  .team-info {
+    max-width: 40%;
+  }
+  
+  .team-info h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .team-info p {
+    margin-bottom: 20px;
+  }
+  
+  .team-stats {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .stat h3 {
+    color: yellow;
+    font-size: 2.5rem;
+  }
+  
+  .team-members {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 60%;
+  }
+  
+  .team-member-card {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #333;
+  }
+  
+  .team-member-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .team-member-card h3 {
+    font-size: 1.5rem;
+  }
+  
+  .team-member-card p {
+    font-size: 1rem;
+    color: #ccc;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .team-title {
+      font-size: 2.5rem; /* Smaller title for medium screens */
+    }
+  
+    .team-breadcrumb {
+      font-size: 1rem; /* Adjust breadcrumb size */
+    }
+  
+    .team-section {
+      flex-direction: column; /* Stack elements vertically on medium screens */
+      padding: 30px; /* Adjust padding */
+    }
+  
+    .team-info {
+      max-width: 100%; /* Allow full width for team info */
+    }
+  
+    .team-members {
+      grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+      max-width: 100%; /* Full width for members */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .team-title {
+      font-size: 2rem; /* Further reduce title size */
+    }
+  
+    .team-breadcrumb {
+      font-size: 0.9rem; /* Smaller breadcrumb size */
+    }
+  
+    .team-section {
+      padding: 20px; /* Less padding for small screens */
+    }
+  
+    .team-members {
+      grid-template-columns: 1fr; /* Stack items in one column on small screens */
+    }
+  
+    .stat h3 {
+      font-size: 2rem; /* Smaller stats font */
+    }
+  }
+  

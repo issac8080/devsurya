@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif; /* Update to match the font in the image */
+}
+
+.faq-container {
+    width: 90%;
+    max-width: 1200px; /* Restrict width for larger screens */
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #121212; /* Dark background */
+    color: white; /* White text */
+    line-height: 1.6; /* Increase line height for better readability */
+}
+
+.faq-hero-section {
+    text-align: center;
+    margin-bottom: 40px; 
+    margin-top: 40px; /* Space below hero section */
+}
+
+.faq-hero-title {
+    font-size: 3rem; /* Title size */
+    margin-bottom: 0px;
+}
+
+.faq-hero-description {
+    color: #ccc; 
+    margin-left: 5px; /* Slightly lighter color for description */
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 20px; /* Space between grid items */
+}
+
+.faq-item {
+    background-color: #1e1e1e; /* Darker background for items */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding inside each item */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.faq-question {
+    font-size: 1.5rem; /* Question size */
+    color: yellow; /* Yellow color for question */
+    margin: 10px 0; /* Margin above and below question */
+}
+
+.faq-divider {
+    border: 1px solid #444; /* Divider line color */
+    margin: 15px 0; /* Space above and below divider */
+}
+
+.faq-answer {
+    margin: 10px 0;
+    color: #ccc; /* Light gray for answers */
+}
+
+.faq-movie-title {
+    font-size: 2rem; /* Title for 'Need Make Your Movie?' */
+    margin-top: 40px; /* Space above this section */
+    margin-bottom: 10px; /* Space below title */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .faq-hero-title {
+        font-size: 2.5rem; /* Smaller title for mobile */
+    }
+
+    .faq-hero-description {
+        font-size: 1rem; /* Adjust description size */
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr; /* Stack items in one column on mobile */
+    }
+
+    .faq-question {
+        font-size: 1.25rem; /* Smaller question size for mobile */
+    }
+
+    .faq-movie-title {
+        font-size: 1.5rem; /* Smaller title for 'Need Make Your Movie?' */
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-container {
+        padding: 20px; /* Less padding for small screens */
+    }
+
+    .faq-hero-title {
+        font-size: 2rem; /* Further reduce title size */
+    }
+
+    .faq-hero-description {
+        font-size: 0.9rem; /* Smaller description size */
+    }
+
+    .faq-question {
+        font-size: 1.2rem; /* Smaller question size */
+    }
+
+    .faq-answer {
+        font-size: 0.9rem; /* Smaller answer text */
+    }
+}

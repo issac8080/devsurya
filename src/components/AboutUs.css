@@ -1,0 +1,196 @@
+/* Reset margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* About Us Container */
+  .about-us-container {
+    width: 100%;
+    color: white;
+    background-color: #111;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Hero Section Styling */
+  .about-hero {
+    height: 30vh;
+    background-image: url('../assets/images/hero.jpeg'); /* Update path to your hero background */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Set position to relative for absolute positioning of overlay */
+  }
+  
+  .about-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Black overlay with 70% opacity */
+    z-index: 1; /* Ensure the overlay is on top of the background */
+  }
+  
+  .about-hero-text {
+    text-align: center;
+    position: relative; /* Set position to relative to be above the overlay */
+    z-index: 2; /* Ensure text is above the overlay */
+  }
+  
+  .about-title {
+    font-size: 3rem;
+    color: white;
+  }
+  
+  .about-breadcrumb {
+    font-size: 1.2rem;
+  }
+  
+  .about-breadcrumb .home {
+    color: yellow;
+  }
+  
+  /* Main Content Section */
+  .about-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 80px;
+    background-color: #121212;
+  }
+  
+  .about-section-left, .about-section-right {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .image-container {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .about-section-left h2 {
+    font-size: 3rem;
+    color: #e5ba3d;
+    margin: 20px 0;
+  }
+  
+  .video-prompt h3 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #e5ba3d;
+  }
+  
+  .video-prompt p {
+    color: #bbb;
+  }
+  
+  .text-overlay {
+    margin-top: 20px;
+  }
+  
+  .text-overlay h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .text-overlay p {
+    margin-bottom: 20px;
+    color: #bbb;
+  }
+  
+  .text-overlay ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .text-overlay ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .text-overlay ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #e5ba3d;
+  }
+  
+  .read-more {
+    color: #e5ba3d;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 1024px) {
+    .about-content {
+      flex-direction: column; /* Stack the sections vertically */
+      padding: 30px; /* Adjust padding for smaller screens */
+    }
+  
+    .about-section-left,
+    .about-section-right {
+      width: 100%; /* Full width for smaller screens */
+    }
+  
+    .about-title {
+      font-size: 2.5rem; /* Slightly smaller title */
+    }
+  
+    .about-breadcrumb {
+      font-size: 1rem; /* Smaller breadcrumb */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about-hero {
+      height: 40vh; /* Adjust height for mobile screens */
+    }
+  
+    .about-title {
+      font-size: 2rem; /* Smaller title for mobile */
+    }
+  
+    .about-breadcrumb {
+      font-size: 0.9rem; /* Smaller breadcrumb for mobile */
+    }
+  
+    .about-content {
+      padding: 20px; /* Less padding for mobile */
+    }
+  
+    .about-section-left h2 {
+      font-size: 2rem; /* Smaller subheading */
+    }
+  
+    .video-prompt h3 {
+      font-size: 1.2rem; /* Smaller video prompt heading */
+    }
+  
+    .text-overlay h2 {
+      font-size: 1.5rem; /* Smaller overlay heading */
+    }
+  
+    .text-overlay p {
+      font-size: 0.9rem; /* Smaller paragraph */
+    }
+  }
+  

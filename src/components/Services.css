@@ -1,0 +1,135 @@
+.services-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.services-hero {
+  height: 25vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services-hero-text {
+  text-align: center;
+  color: white;
+}
+
+.services-title {
+  font-size: 3rem;
+}
+
+.services-breadcrumb {
+  font-size: 1.2rem;
+}
+
+.services-breadcrumb .home {
+  color: yellow;
+}
+
+.services-grid-section {
+  padding: 50px 80px;
+  background-color: #121212;
+}
+
+.services-heading {
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.service-card {
+  background-color: #1a1a1a;
+  padding: 30px;
+  color: white;
+  text-align: center;
+  border: 1px solid #333;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 40px;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+.service-icon {
+  font-size: 7px;
+  margin-bottom: 20px;
+  color: yellow;
+}
+
+.service-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.service-description {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .services-hero {
+    height: 30vh; /* Adjust height for smaller screens */
+  }
+
+  .services-title {
+    font-size: 2.5rem; /* Smaller title */
+  }
+
+  .services-breadcrumb {
+    font-size: 1rem; /* Smaller breadcrumb */
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for tablets */
+  }
+
+  .services-grid-section {
+    padding: 30px 40px; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .services-hero {
+    height: 40vh; /* Adjust height for mobile screens */
+  }
+
+  .services-title {
+    font-size: 2rem; /* Smaller title */
+  }
+
+  .services-breadcrumb {
+    font-size: 0.9rem; /* Smaller breadcrumb */
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr; /* Single column for phones */
+  }
+
+  .services-grid-section {
+    padding: 20px; /* Less padding for mobile */
+  }
+
+  .service-icon {
+    font-size: 5px; /* Smaller icons for mobile */
+  }
+
+  .service-title {
+    font-size: 1.25rem; /* Smaller service title */
+  }
+
+  .service-description {
+    font-size: 0.9rem; /* Smaller service description */
+  }
+}

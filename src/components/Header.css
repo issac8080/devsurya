@@ -1,0 +1,242 @@
+/* Import Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.hero-container {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-left: 10%;
+  color: white;
+  transition: background-image 3s ease-in-out;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 900px;
+  text-align: left;
+  z-index: 2;
+  padding: 20px;
+}
+
+.hero-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  color: yellow;
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  font-size: 78px;
+  margin-top: 10px;
+}
+
+.hero-description {
+  font-size: 15px;
+  margin-top: 20px;
+  max-width: 700px;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+.navbar {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  position: relative;
+}
+
+.nav-links li {
+  display: inline-block;
+  position: relative;
+}
+
+.nav-links span {
+  color: yellow;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer; /* Change cursor for dropdowns */
+}
+
+.nav-links a {
+  color: yellow; /* Ensure all links are yellow */
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: color 0.3s ease; /* Transition for color change */
+}
+
+.nav-links li:hover > a {
+  color: yellow; /* Ensure hover state remains yellow */
+}
+
+.social-icons a {
+  color: white;
+  margin-left: 15px;
+  font-size: 18px;
+}
+
+.social-icons a:hover {
+  color: yellow;
+}
+
+/* Hamburger Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: yellow;
+  margin: 3px 0;
+  transition: all 0.3s ease; /* Smooth transition for lines */
+}
+
+/* Mobile Navigation Styles */
+@media (max-width: 768px) {
+  .navbar .nav-links {
+    display: none; /* Hide by default */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    width: 100%;
+  }
+
+  .navbar.active .nav-links {
+    display: flex; /* Show when active */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger icon on mobile */
+  }
+}
+
+/* Dropdown Styles */
+.dropdown {
+  display: none; /* Initially hidden */
+  position: absolute;
+  top: 100%; /* Align with parent */
+  left: 0;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  z-index: 20;
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.3s ease; /* Fade transition */
+  pointer-events: none; /* Prevent interaction when hidden */
+}
+
+.nav-links li:hover .dropdown {
+  display: block;
+  opacity: 1; /* Show on hover */
+  pointer-events: auto; /* Allow interaction */
+}
+
+.dropdown li {
+  padding: 10px 15px;
+  display: block;
+}
+
+.dropdown li a {
+  color: #333;
+  font-size: 12px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s ease, color 0.3s ease; /* Smooth transitions for dropdown */
+}
+
+.dropdown li a:hover {
+  background: yellow;
+  color: black;
+}
+
+/* Hero Section Media Queries */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5%;
+    height: 100vh;
+  }
+
+  .hero-content {
+    margin: 0;
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    font-size: 36px;
+  }
+}
+
+.cross {
+  font-size: 30px;
+  color: yellow;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active .line {
+  display: none; /* Hide lines when menu is open */
+}
+
+.hamburger.active .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px); /* Animate top line */
+}
+
+.hamburger.active .line:nth-child(2) {
+  opacity: 0; /* Hide middle line */
+}
+
+.hamburger.active .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px); /* Animate bottom line */
+}

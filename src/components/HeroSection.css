@@ -1,0 +1,149 @@
+/* Import Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.hero-container {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center; /* Center content by default */
+  padding-left: 10%;
+  color: white;
+  transition: background-image 3s ease-in-out;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  max-width: 900px;
+  text-align: left;
+  z-index: 2;
+  padding: 20px;
+}
+
+.hero-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  color: yellow;
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  font-size: 78px;
+  margin-top: 10px;
+}
+
+.hero-description {
+  font-size: 15px;
+  margin-top: 20px;
+  max-width: 700px;
+}
+
+/* Hamburger Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 2; /* Ensure above overlay */
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: yellow;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+}
+
+/* Mobile Navigation Styles */
+.mobile-nav {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 60px; /* Adjust position */
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 2;
+}
+
+.mobile-nav.active {
+  display: block; /* Show when active */
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-nav li {
+  padding: 15px;
+  text-align: center; /* Center align items */
+}
+
+.mobile-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+    padding-left: 5%; /* Less padding on small screens */
+    height: 100vh; /* Ensure full height on small screens */
+  }
+
+  .hero-content {
+    margin: 0; /* Remove any margin to avoid extra space */
+    text-align: center; /* Center-align the text */
+  }
+
+  .hero-subtitle {
+    font-size: 36px; /* Adjust subtitle size for mobile */
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+.cross {
+  font-size: 30px;
+  color: yellow; /* Use the same color as the hamburger */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: yellow;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active .line {
+  display: none; /* Hide hamburger lines when menu is open */
+}

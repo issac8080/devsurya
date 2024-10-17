@@ -1,0 +1,56 @@
+.about {
+    padding: 80px 20px;
+    background-color: #f9f9f9; /* Adjust as per your design */
+  }
+  
+  .about-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+  
+  .about-image img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .about-content {
+    flex: 1;
+  }
+  
+  .about-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .about-content p {
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  
+  .learn-more {
+    padding: 10px 25px;
+    background-color: #000; /* Example button color */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .learn-more:hover {
+    background-color: #333; /* Darker shade on hover */
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+    }
+  
+    .about-image img {
+      max-width: 100%;
+    }
+  }
+  

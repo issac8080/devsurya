@@ -1,0 +1,47 @@
+.contact {
+    padding: 80px 20px;
+    background-color: #fff; /* Adjust as per your design */
+    text-align: center;
+  }
+  
+  .contact h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #f0a500; /* Example focus color */
+    outline: none;
+  }
+  
+  .submit-button {
+    padding: 15px;
+    background-color: #000; /* Example button color */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #333; /* Darker shade on hover */
+  }
+  
